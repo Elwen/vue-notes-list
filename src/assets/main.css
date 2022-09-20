@@ -1,35 +1,91 @@
 @import './base.css';
 
 #app {
-  max-width: 1280px;
+  max-width: 768px;
   margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
+  padding-left: var(--base-gap);
+  padding-right: var(--base-gap);
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
+.btn {
+  border: 0;
+  background: none;
+  color: var(--color-button);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn--icon {
+  padding: 0;
+  line-height: 0;
+}
+
+.btn--with-icon {
+  display: inline-flex;
+  text-transform: uppercase;
+}
+
+.btn--bordered {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: 0.5rem 1rem;
+}
+
+.btn--with-icon span {
+  margin-left: 0.5rem;
+}
+
+.title {
+  margin: 2rem 0 1rem;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.input {
+  width: 100%;
+  min-height: 36px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  background: var(--color-background-soft);
+  font-size: 1em;
+  line-height: 1.6;
+  color: var(--color-text);
+  padding: 0.25rem 0.5rem;
+}
+
+.input:focus-visible {
+  outline: var(--color-border-hover);
+}
+
+.input--textarea {
+  resize: vertical;
+  height: 36px;
+  font-family: inherit;
+}
+
+.checkbox {
+  accent-color: var(--vt-c-green-light);
+}
+
+.text-center {
+  text-align: center;
 }
 
 @media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+  .btn:hover {
+    color: var(--color-button-hover);
+  }
+
+  .btn--bordered:hover {
+    border-color: var(--color-border-hover);
   }
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
+@media screen and (min-width: 64em) {
+  .title {
+    font-size: 2.5rem;
   }
 }

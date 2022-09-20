@@ -8,7 +8,7 @@ SPA приложение для заметок.
 npm install
 ```
 
-###  Компиляция и запуск в режиме разработки
+### Компиляция и запуск в режиме разработки
 
 ```sh
 npm run dev
@@ -31,3 +31,7 @@ npm run lint
 ```sh
 npm run format
 ```
+
+### Ссылки
+
+- Иконки [Modern Ui Icons Vector](https://www.svgrepo.com/collection/modern-ui-icons/)
